@@ -1,0 +1,10 @@
+# Agent Readiness Checker
+
+> A free scan that tells a Shopify or WooCommerce store owner whether AI shopping assistants can read their products. Returns a 0-100 score and a pass/warn/fail checklist.
+
+Agents can call the scan directly. Send `POST /api/scan` with JSON `{"url": "mystore.com"}`. The response is JSON with `score`, `grade`, `headline`, and `checks` (each with `id`, `status`, `detail`, `why`, `fix`).
+
+## API
+
+- [Scan a store](/api/scan): POST, JSON in and out
+- [Checkout status](/api/config): GET, says whether the test-mode fix offer is available
